@@ -81,7 +81,8 @@ class Vditor extends VditorMethod {
                         document.head.removeChild(el);
                     }
                 });
-                addScript(`${mergedOptions.cdn}/dist/js/i18n/${mergedOptions.lang}.js`, i18nScriptID).then(() => {
+                // 自定义语言目录
+                addScript(`/resouces/vditor/js/i18n/${mergedOptions.lang}.js`, i18nScriptID).then(() => {
                     this.init(id as HTMLElement, mergedOptions);
                 });
             }
@@ -509,7 +510,7 @@ class Vditor extends VditorMethod {
             }
             if (mergedOptions.icon) {
                 // 防止初始化 2 个编辑器时加载 2 次
-                addScriptSync(`${mergedOptions.cdn}/dist/js/icons/${mergedOptions.icon}.js`, "vditorIconScript");
+                addScriptSync(`/resouces/vditor/js/icons/${mergedOptions.icon}.js`, "vditorIconScript");
             }
         });
     }
