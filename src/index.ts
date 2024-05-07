@@ -476,7 +476,7 @@ class Vditor extends VditorMethod {
 
         addScript(
             mergedOptions._lutePath ||
-            `${mergedOptions.cdn}/dist/js/lute/lute.min.js`,
+            `/resouces/vditor/js/lute/lute.min.js`,
             "vditorLuteScript",
         ).then(() => {
             this.vditor.lute = setLute({
